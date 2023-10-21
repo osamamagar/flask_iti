@@ -1,0 +1,21 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+    <h1>Create a New Post</h1>
+    <form method="POST" class="container">
+        <div class="form-group ">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" name="body" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="file" id="image" name="image" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary my-4">Create Post</button>
+    </form>
+{% endblock %}
+

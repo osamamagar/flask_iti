@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+
+{% block title %}
+    Confirm Deletion
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-danger my-4">Confirm Deletion</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ post.name }}</h5>
+                <p class="card-text">{{ post.body }}</p>
+                <p class="card-text">Created at: {{ post.created_at }}</p>
+                <p class="card-text">Updated at: {{ post.updated_at }}</p>
+                <form method="POST">
+                    <button type="submit" class="btn btn-danger my-3">Delete Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
